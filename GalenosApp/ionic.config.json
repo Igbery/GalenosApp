@@ -1,0 +1,7 @@
+{
+  "name": "GalenosApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
