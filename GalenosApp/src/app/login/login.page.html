@@ -4,6 +4,8 @@
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -11,15 +13,23 @@
     </ion-toolbar>
   </ion-header>
   <div>
-    <ion-item>
-      <ion-input label="Login"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Email:" label-placement="floating" fill="outline" type="emil" placeholder="Email@mail.com"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Contraseña:" label-placement="floating" fill="outline" type="password" value="password"></ion-input>
-    </ion-item>
-    <ion-button expand="block" url="./folder">Sing-in</ion-button>
+    <div class="ion-text-center">
+      <H1>Login</H1>
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input fill="outline" type="email" placeholder="Email@mail.com"
+        helperText="Enter a valid email" errorText="Invalid email" ngModel email>
+      </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">password</ion-label>
+        <ion-input fill="outline" type="password" value="password"></ion-input>
+      </ion-item>
+      <ion-button href="./folder">Sing-In</ion-button>
+      <h5>¿Aun no tienes una cuenta?</h5>
+      <ion-button href="./register">Registrate</ion-button>
+    </ion-list> 
   </div>
 </ion-content>
