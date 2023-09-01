@@ -22,9 +22,11 @@
         <ion-label position="floating">password</ion-label>
         <ion-input fill="outline" type="password" value="password"></ion-input>
       </ion-item>
-      <ion-button (click)="navigateToMain()">Ingresa</ion-button>
-      <h5 class="ion-text-center">¿Aun no tienes una cuenta?</h5>
-      <ion-button (click)="navigateToRegister">Registrate</ion-button>
+      <div class="ion-text-center">
+        <ion-button (click)="navigateToMain()">Ingresa</ion-button>
+        <h5 class="ion-text-center">¿Aun no tienes una cuenta?</h5>
+        <ion-button (click)="navigateToRegister()">Registrate</ion-button>
+      </div>
     </ion-list> 
   </div>
 </ion-content>
