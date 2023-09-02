@@ -5,26 +5,34 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div>
-    <div class="ion-text-center">
-      <H1>Login</H1>
+ <ion-card>
+    <div>
+      <ion-card-header>
+        <ion-card-title>
+          Login
+        </ion-card-title>
+      </ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input fill="outline" type="email" placeholder="Email@mail.com"
+          helperText="Enter a valid email" errorText="Invalid email" ngModel email>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">password</ion-label>
+          <ion-input fill="outline" type="password" value="password"></ion-input>
+        </ion-item>
+        <div class="ion-text-center">
+          <ion-button (click)="navigateToMain()">Ingresa</ion-button>
+          <br />
+          <h5 class="ion-text-center">¿Aun no tienes una cuenta?</h5>
+          <ion-button (click)="navigateToRegister()">Registrate</ion-button>
+        </div>
+        <div class="ion-text-center">
+          <ion-button fill="clear" color="primary" (click)="navigateToMain">Cambia tu contraseña</ion-button>
+        </div>
+      </ion-list> 
     </div>
-    <ion-list>
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input fill="outline" type="email" placeholder="Email@mail.com"
-        helperText="Enter a valid email" errorText="Invalid email" ngModel email>
-        </ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">password</ion-label>
-        <ion-input fill="outline" type="password" value="password"></ion-input>
-      </ion-item>
-      <div class="ion-text-center">
-        <ion-button (click)="navigateToMain()">Ingresa</ion-button>
-        <h5 class="ion-text-center">¿Aun no tienes una cuenta?</h5>
-        <ion-button (click)="navigateToRegister()">Registrate</ion-button>
-      </div>
-    </ion-list> 
-  </div>
+  </ion-card>
 </ion-content>
