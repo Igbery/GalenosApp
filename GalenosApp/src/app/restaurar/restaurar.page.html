@@ -1,13 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>restaurar</ion-title>
+    <ion-title class="ion-text-center" color="dark">Galenos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">restaurar</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Recuperar Contraseña</ion-card-title>
+    </ion-card-header>
+    <ion-card-body>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input fill="outline" type="email" placeholder="Email@mail.com"
+        helperText="Enter a valid email" errorText="Invalid email" ngModel email>
+      </ion-input>
+      </ion-item>
+      <h5 class="ion-text-center">Con el correo validaremos tu usuario y te enviaremos el link para cambiar tu contraseña</h5>
+      <div class="ion-text-center">
+        <ion-button fill="solid" (click)="navigateToLogin()">Enviar</ion-button>
+      </div>
+      <h5 class="ion-text-center">¿Aun no tienes una cuenta?</h5>
+      <div class="ion-text-center">
+        <ion-button fill="solid" (click)="navigateToRegister()">Registrate</ion-button>
+      </div>
+    </ion-card-body>
+  </ion-card>
 </ion-content>

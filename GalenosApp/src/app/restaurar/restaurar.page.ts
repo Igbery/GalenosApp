@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-restaurar',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurarPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  navigateToLogin(){
+    this.router.navigateByUrl('/login');
+  }
+
+  navigateToRegister(){
+    this.router.navigateByUrl('/register')
   }
 
 }

@@ -22,4 +22,8 @@ export class LoginPage implements OnInit {
     this.router.navigateByUrl('/main');
   }
 
+  navigateToRestaurar(){
+    this.router.navigateByUrl('/restaurar')
+  }
+
 }
