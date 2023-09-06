@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+  },
+  {
+    path: 'restaurar',
+    loadChildren: () => import('./restaurar/restaurar.module').then( m => m.RestaurarPageModule)
   }
 ];
 
