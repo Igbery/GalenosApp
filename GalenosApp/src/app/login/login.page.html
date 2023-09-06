@@ -16,12 +16,12 @@
         <ion-item>
           <ion-label position="floating">Email</ion-label>
           <ion-input fill="outline" type="email" placeholder="Email@mail.com"
-          helperText="Enter a valid email" errorText="Invalid email" ngModel email>
+          helperText="Enter a valid email" errorText="Invalid email" [(ngModel)]="ValorEnviar.usuario" email>
           </ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">password</ion-label>
-          <ion-input fill="outline" type="password" value="password"></ion-input>
+          <ion-input fill="outline" type="password" value="password" [(ngModel)]="ValorEnviar.password"></ion-input>
         </ion-item>
         <div class="ion-text-center">
           <ion-button (click)="navigateToMain()">Ingresa</ion-button>

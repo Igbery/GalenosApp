@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
+
 
 
 @Component({
@@ -8,6 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+
+  ValorEnviar={
+    usuario:"",
+    password:""
+  }
 
   constructor(private router: Router) { }
 
@@ -24,6 +30,14 @@ export class LoginPage implements OnInit {
 
   navigateToRestaurar(){
     this.router.navigateByUrl('/restaurar')
+  }
+  ingresar(){
+    let navigationExtras: NavigationExtras ={
+      state: {
+        ValorEnviar: this.ValorEnviar
+      }
+    };
+    this,router.navigate(['main'],navigationExtras);
   }
 
 }
