@@ -9,6 +9,7 @@ import { Router, NavigationExtras } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  mensajeInput = 'Ingresar Nombre de Usuario';
 
   ValorEnviar={
     usuario:"",
@@ -25,19 +26,16 @@ export class LoginPage implements OnInit {
   }
 
   navigateToMain(){
-    this.router.navigateByUrl('/main');
-  }
-
-  navigateToRestaurar(){
-    this.router.navigateByUrl('/restaurar')
-  }
-  ingresar(){
     let navigationExtras: NavigationExtras ={
       state: {
         ValorEnviar: this.ValorEnviar
       }
     };
-    this,router.navigate(['main'],navigationExtras);
+    this.router.navigate(['main'],navigationExtras);
+  }
+
+  navigateToRestaurar(){
+    this.router.navigateByUrl('/restaurar')
   }
 
 }
