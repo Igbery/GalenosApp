@@ -9,8 +9,10 @@ import { MenuController } from '@ionic/angular';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Login', url: './login', icon: 'accessibility' },
-    { title: 'Register', url: './register', icon: 'add-circle' }
+    { title: 'Reserva de Horas', url: './login', icon: 'accessibility' },
+    { title: 'Pago en linea', url: './register', icon: 'add-circle' },
+    { title: 'Tus Horas', url:'./horas', icon:'bag.add'},
+    { title: 'Salir', url:'./login', icon:''}
   ];
   constructor(private menu: MenuController, public router: Router) {
     this.initializeApp();
@@ -18,13 +20,5 @@ export class AppComponent {
   initializeApp(){
     this.router.navigateByUrl('splash');
   }
-  ngOnInit(){
-    this.openMenu();
-  }
-  openMenu(){
-    this.menu.open();
-  }
-  closeMenu(){
-    this.menu.close();
-  }
+  ngOnInit(){}
 }

@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'restaurar',
     loadChildren: () => import('./restaurar/restaurar.module').then( m => m.RestaurarPageModule)
+  },
+  {
+    path: 'reserva',
+    loadChildren: () => import('./reserva/reserva.module').then( m => m.ReservaPageModule)
   }
 ];
 

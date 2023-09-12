@@ -35,7 +35,7 @@ export class LoginPage implements OnInit {
   }
 
   navigateToRestaurar(){
-    this.router.navigateByUrl('/restaurar')
+    this.router.navigateByUrl('/restaurar');
   }
 
 }
