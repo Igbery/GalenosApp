@@ -9,28 +9,23 @@
     <ion-card-header>
       <ion-card-title>Datos Necesarios</ion-card-title>
     </ion-card-header>
-    <ion-item>
-      <ion-label position="floating">Rut</ion-label>
-      <ion-input fill="outline" placeholder="XXXXXXXX-X"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input fill="outline"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Apellido</ion-label>
-      <ion-input fill="outline"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input fill="outline" type="email" placeholder="Email@mail.com"
-      helperText="Enter a valid email" errorText="Invalid email" ngModel email>
-      </ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input fill="outline" type="password" value="password"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-input label="Rut" formControlName="rut" fill="outline" placeholder="XXXXXXXX-X"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Nombre" formControlName="nombre" fill="outline"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Apellido" formControlName="apellido" fill="outline"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Email" formControlName="email" fill="outline" type="email" placeholder="Email@mail.com"
+        helperText="Enter a valid email" errorText="Invalid email" ngModel email>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Contraseña" formControlName="contrasena" fill="outline" type="password" value="password"></ion-input>
+      </ion-item>
     <div class="ion-text-center">
       <ion-button fill="solid" (click)="navigateToLogin()">Guardar</ion-button>
     </div>

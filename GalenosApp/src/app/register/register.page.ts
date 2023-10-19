@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FirestoreService } from '../service/firestore.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -8,13 +10,32 @@ import { Router } from '@angular/router';
 })
 export class RegisterPage implements OnInit {
 
-  constructor(private router: Router) { }
+  formulario: FormGroup
+
+  constructor(private router: Router, private firestore: FirestoreService) {
+
+    this.formulario = new FormGroup({
+      
+      rut: new FormControl,
+      nombre: new FormControl(),
+      apellido: new FormControl,
+      email: new FormControl,
+      contrasena: new FormControl
+  
+    })
+   }
 
   ngOnInit() {
   }
 
   navigateToLogin(){
     this.router.navigateByUrl('/login');
+  }
+
+  async onSubmit(){
+    console.log(this.formulario.value)
+    const response = await this.firestore.addUser(this.formulario.value)
+    console.log(response)
   }
 
 }
