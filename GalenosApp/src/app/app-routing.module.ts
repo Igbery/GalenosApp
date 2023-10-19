@@ -34,8 +34,9 @@ const routes: Routes = [
     canActivate: [AngularFireAuthGuard]
   },
   {
+    //Page 404 not found 
     path: '**',
-    component: PagenootfoundComponent
+    loadChildren: () => import('./pagenotfound/pagenotfound.component').then( m => m.PagenotfoundComponent)
   }
 ];
 

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { PagenootfoundComponent } from './pagenootfound.component';
+import { PagenotfoundComponent } from './pagenotfound.component';
 
-describe('PagenootfoundComponent', () => {
-  let component: PagenootfoundComponent;
-  let fixture: ComponentFixture<PagenootfoundComponent>;
+describe('PagenotfoundComponent', () => {
+  let component: PagenotfoundComponent;
+  let fixture: ComponentFixture<PagenotfoundComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PagenootfoundComponent ],
+      declarations: [ PagenotfoundComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PagenootfoundComponent);
+    fixture = TestBed.createComponent(PagenotfoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
