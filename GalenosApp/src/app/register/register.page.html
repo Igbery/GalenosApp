@@ -9,8 +9,9 @@
     <ion-card-header>
       <ion-card-title>Datos Necesarios</ion-card-title>
     </ion-card-header>
-    <ion-list>
-      <form #formulario="ngForm" (ngSumbmit)="onSubmit">
+    
+    <form #formulario="ngForm" (ngSumbmit)="onSubmit">
+      <ion-list>
         <ion-item>
           <ion-label position="floating">Rut</ion-label>
           <ion-input fill="outline" 
@@ -53,7 +54,7 @@
         <div class="ion-text-center">
           <ion-button fill="solid" (click)="onSubmit()">Guardar</ion-button>
         </div>
-      </form>
-    </ion-list>
+      </ion-list>
+    </form>
   </ion-card>
 </ion-content>
