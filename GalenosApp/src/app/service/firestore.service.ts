@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
 import { UserProfile } from '../user-profile.interface';
 import { Observable } from 'rxjs';
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,11 @@ export class FirestoreService {
   addUser(user: UserProfile){
     const userRef = collection(this.firestore, 'Usuarios');
     return addDoc(userRef, user);
+  }
+
+  //Crear usuario JC
+  signUp(user : UserProfile){
+    return createUserWithEmailAndPassword(getAuth(), user.email, user.contrasena);
   }
 
   getUser(): Observable<UserProfile[]>{

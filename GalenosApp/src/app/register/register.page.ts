@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FirestoreService } from '../service/firestore.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validator } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -16,13 +16,14 @@ export class RegisterPage implements OnInit {
 
     this.formulario = new FormGroup({
       
-      rut: new FormControl,
-      nombre: new FormControl(),
-      apellido: new FormControl,
-      email: new FormControl,
-      contrasena: new FormControl
+      rut: new FormControl(''),
+      nombre: new FormControl(''),
+      apellido: new FormControl(''),
+      email: new FormControl(''),
+      contrasena: new FormControl('')
   
-    })
+    });
+
    }
 
   ngOnInit() {
@@ -36,6 +37,12 @@ export class RegisterPage implements OnInit {
     console.log(this.formulario.value)
     const response = await this.firestore.addUser(this.formulario.value)
     console.log(response)
+  }
+
+  async createUser(){
+    if(this.formulario.valid){
+      
+    }
   }
 
 }

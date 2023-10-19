@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+import { AuthGuard } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule),
-    canActivate: [AngularFireAuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'restaurar',
@@ -31,7 +31,7 @@ const routes: Routes = [
   {
     path: 'reserva',
     loadChildren: () => import('./reserva/reserva.module').then( m => m.ReservaPageModule),
-    canActivate: [AngularFireAuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     //Page 404 not found 
