@@ -22,6 +22,12 @@ const routes: Routes = [
   {
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule),
+    children: [ 
+      {
+        path: '',
+        loadChildren: () => import('./mapa/mapa.component').then(m => m.MapaComponent)
+      }
+    ],
     canActivate: [AuthGuard]
   },
   {
